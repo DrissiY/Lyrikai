@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: stretch;
     flex-direction: row;
-
 }
 
 .left {
@@ -22,8 +21,9 @@
     h1 {
         font-size: 48px;
         text-align: center;
-        padding: 3rem;
+        padding: 2rem;
         font-weight: 400;
+        color: white;
     }
 
     .account {
@@ -34,47 +34,15 @@
     }
 
     .img-title {
-        padding: 3rem;
-
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-size: cover;
-        margin: 3rem 0rem 0 0rem;
-        border-radius: 3rem;
-        position: relative;
-        border: 0.2rem solid black;
-        /* Add this to create a stacking context for the pseudo-element */
-
-
-        /* Add a pseudo-element to create the dark overlay */
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgb(67, 102, 109);
-            background: linear-gradient(90deg, rgba(16, 59, 68, 1) 0%, rgba(0, 0, 0, 1) 35%, rgba(56, 187, 215, 1) 100%);
-            /* Adjust opacity as needed */
-            border-radius: 4rem;
-            /* Optional: apply border-radius to match the container */
-        }
-
-        p {
-            margin: 2rem;
-            color: white;
-            position: relative;
-            /* Add this to allow z-index */
-            z-index: 1;
-            /* Add this to place the text above the dark layer */
-            font-weight: 100;
-
-            strong {
-                font-size: 1.2rem;
-            }
-        }
-
+        margin: 1rem 0rem 0 0rem;
 
     }
+
 }
 
 .right {

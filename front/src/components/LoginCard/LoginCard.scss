@@ -96,4 +96,22 @@
         gap: 0.2rem;
     }
 
+    .createit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+    }
 }

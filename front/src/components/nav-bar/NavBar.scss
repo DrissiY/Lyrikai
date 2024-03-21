@@ -1,11 +1,24 @@
-.navbar {
+.container-nav {
+    max-width: 95rem;
+    /* Converted from 1200px to rem */
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    /* Converted from 20px to rem */
+}
+
+.btn-primary {
     background-color: white;
-    border: solid 0.3rem var(--secondary-color);
+
+}
+
+.navbar {
+    background-color: #303A44;
     display: flex;
-    border-radius: 3rem;
     justify-content: space-between;
     align-items: center;
-    padding: 7px;
+    padding: 1.2rem 6rem 1.2rem 6rem;
+    position: relative;
+
 
     &__left {
         display: flex;
@@ -31,7 +44,7 @@
 
             a {
                 text-decoration: none;
-                color: #333;
+                color: white;
             }
         }
     }
@@ -39,7 +52,7 @@
     &__right {
         .navbar__signin {
             padding: 10px 20px;
-            background-color: #103B44;
+            background-color: white;
             color: white;
             border: none;
             border-radius: 22px;

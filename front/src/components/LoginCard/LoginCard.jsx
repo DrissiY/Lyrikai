@@ -3,7 +3,7 @@ import "./LoginCard.scss";
 
 const LoginCard = (
 ) => {
-  const [title, setTitle] = useState('Login in to  your account');
+  const [title, setTitle] = useState('Welcome back ! 👋');
   const titleRef = useRef(null);
 
   const handleSubmit = (event) => {
@@ -32,6 +32,10 @@ const LoginCard = (
       </div>
       <button className='submit'>Login</button>
       </form>
+      <div className='createit'>
+        <p>You don’t  have an account ?</p>
+        <a>Create account</a></div>
+
     </div>
   );
 };
