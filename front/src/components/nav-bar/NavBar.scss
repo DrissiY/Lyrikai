@@ -59,18 +59,23 @@
             cursor: pointer;
         }
 
+        .navbar__mobile {
+            display: flex;
+            justify-content: space-between;
 
+        }
     }
 
     @media screen and (max-width: 768px) {
-        flex-direction: column;
+
+        padding: 1.2rem 1rem 1.2rem 1rem;
 
         &__left {
             margin-bottom: 10px;
         }
 
         &__links li {
-            display: block;
+            display: none;
             margin-bottom: 10px;
         }
 

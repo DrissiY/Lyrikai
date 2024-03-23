@@ -34,7 +34,7 @@ const LoginCard = (
       </form>
       <div className='createit'>
         <p>You don’t  have an account ?</p>
-        <a>Create account</a></div>
+        <a href='/signup'>Create account</a></div>
 
     </div>
   );

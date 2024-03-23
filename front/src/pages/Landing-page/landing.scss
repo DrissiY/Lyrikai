@@ -3,7 +3,7 @@
 }
 
 .landing-container {
-    padding-top: 1rem;
+    padding-top: 2rem;
     width: 100%;
     height: 100%;
     display: flex;
@@ -67,5 +67,38 @@
     a {
         color: #0c6478;
         text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+    }
+
+    .left {
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 400;
+            color: white;
+        }
+
+    }
+
+    .circles {
+        display: none;
+
+
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+        background-color: blueviolet;
     }
 }

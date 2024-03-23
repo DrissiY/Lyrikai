@@ -1,0 +1,9 @@
+.chat {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .chat {
+        flex-direction: column;
+    }
+}

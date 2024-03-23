@@ -1,0 +1,36 @@
+.write {
+    background-color: #303A44;
+    border-radius: 20rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    bottom: 0;
+
+    input {
+        font-size: 16px;
+        float: left;
+        padding: 0 10px;
+        color: white;
+        width: 100%;
+        border: 0;
+        outline: none;
+        background-color: transparent;
+
+    }
+
+    .write-link {
+        &.send {
+            &:before {
+                background-color: white;
+                border-radius: 50%;
+                float: left;
+                width: 2rem;
+                height: 2rem;
+                content: '';
+                background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
