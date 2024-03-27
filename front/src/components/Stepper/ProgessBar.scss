@@ -1,0 +1,113 @@
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #303A44;
+    border-radius: 22px;
+}
+
+.progress-bar-segment.completed {
+    background-color: #38BBD7;
+
+}
+
+.progress-bar-segment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 22px;
+    transition: width 5s ease-in-out;
+}
+
+.progress-bar-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 22px;
+    background-color: #2196f3;
+    transition: width 1s ease-in-out;
+}
+
+.step-titles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.step-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.step-title.active {
+    color: #38BBD7;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 22rem;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: #38BBD7;
+    color: white;
+}
+
+button:disabled {
+    background-color: #9d9d9d;
+    /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Add this CSS to your existing styles */
+
+.step-input {
+    width: 100%;
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input[type="text"],
+    select {
+        width: 50%;
+        padding: 1rem;
+        font-size: 16px;
+        border-radius: 30px;
+        border: none;
+        box-sizing: border-box;
+        background-color: #303A44;
+        color: white;
+        outline: none;
+    }
+
+    select {
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("../../assets/icons8-dropdown-30.png");
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        outline: none;
+    }
+}
