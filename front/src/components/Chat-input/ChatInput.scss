@@ -15,7 +15,6 @@
         border: 0;
         outline: none;
         background-color: transparent;
-
     }
 
     .write-link {
@@ -30,6 +29,33 @@
                 background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png');
                 background-repeat: no-repeat;
                 background-position: center;
+            }
+        }
+    }
+}
+
+.chat-history {
+
+    margin-top: 20px;
+
+    .message {
+        margin-bottom: 10px;
+
+        span {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        &.sent {
+            text-align: right;
+        }
+
+        &.received {
+            text-align: left;
+
+            span {
+                color: #007bff;
+                /* Change color as needed */
             }
         }
     }
