@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import Sidebar from '../../components/Side-bar/Sidebar'
-import ChatInput from '../../components/Chat-input/ChatInput'
-import "./Chat.scss"
-import ProgressBar from '../../components/Stepper/ProgessBar'
+import Sidebar from '../../components/Side-bar/Sidebar';
+import ChatInput from '../../components/Chat-input/ChatInput';
+import "./Chat.scss";
+import ProgressBar from '../../components/Stepper/ProgessBar';
 import ChatHistory from '../../components/chat-history/ChatHistory';
-
-
 
 const Chat = () => {
   const [formFilled, setFormFilled] = useState(false);
@@ -13,24 +11,28 @@ const Chat = () => {
 
   // Function to handle form submission in the stepper
   const handleFormSubmit = () => {
-    // Assuming you have a way to determine if the form is filled, set formFilled to true
     setFormFilled(true);
+  };
+
+  // Function to handle new messages from ChatInput
+  const handleNewMessage = (newMessage) => {
+    setChat([...chat, newMessage]);
   };
 
   return (
     <div className='chat'>
-      <Sidebar></Sidebar>
+      <Sidebar />
       <div className="therest">
-      {!formFilled && <ProgressBar onFormSubmit={handleFormSubmit} />}
+        {!formFilled && <ProgressBar onFormSubmit={handleFormSubmit} />}
         {formFilled && (
           <>
-            <ChatInput chat={chat} onNewMessage={setChat} /> {/* Pass chat and function to update */}
             <ChatHistory chat={chat} /> {/* Display chat history */}
+            <ChatInput onNewMessage={handleNewMessage} /> {/* Pass callback function to update chat */}
           </>
         )}
       </div>
-      </div>
-  )
+    </div>
+  );
 }
 
-export default Chat
+export default Chat;

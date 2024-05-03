@@ -32,6 +32,7 @@
   a {
     color: var(--neutral-color);
     text-decoration: none;
+    cursor: pointer;
   }
 
   a:hover {

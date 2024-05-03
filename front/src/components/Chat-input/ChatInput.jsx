@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import "./ChatInput.scss";
 
-
-const ChatInput = () => {
+const ChatInput = ({ onNewMessage }) => {
   const [message, setMessage] = useState('');
-
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
@@ -13,13 +11,13 @@ const ChatInput = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (message.trim() !== '') {
-      const newChat = [...chat, { sender: 'me', message }];
-      setChat(newChat);
+      const newMessage = { sender: 'me', message }; // Create a new message object
+      onNewMessage(newMessage); // Add the new message to the chat history
       setMessage('');
       // Simulating automatic response
       setTimeout(() => {
         const autoResponse = { sender: 'bot', message: 'Sorry, we are not here right now.' };
-        setChat([...newChat, autoResponse]);
+        onNewMessage(autoResponse); // Send the automatic response to Chat component
       }, 1000); // Simulating delay
     }
   };
@@ -32,7 +30,7 @@ const ChatInput = () => {
         value={message}
         onChange={handleMessageChange}
       />
-      <a className="write-link send" onClick={handleSubmit}></a>
+      <button className="write-link send" onClick={handleSubmit}>Send</button>
     </div>
   );
 };
